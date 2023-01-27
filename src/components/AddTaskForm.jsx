@@ -11,7 +11,11 @@ const AddTaskForm = ({newTask,setNewTask,addTask}) => {
           />
         </div>
         <div className="col-auto">
-          <button className="btn btn-lg btn-success" onClick={addTask}>Add Task</button>
+          <button 
+            className="btn btn-lg btn-success"
+            onClick={addTask}
+            disabled={newTask.length=== 0 ? "disabled":""}
+            >Add Task</button>
         </div>
       </div>
       <br />
